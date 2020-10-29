@@ -13,6 +13,7 @@ import '../user/RegisterSecondDart.dart';
 import '../user/RegisterThirdDart.dart';
 import '../AppBarDemo.dart';
 import '../TabBarController.dart';
+import '../ButtonDemo.dart';
 
 //配置路由
 
@@ -28,7 +29,8 @@ final routes={
   '/registerThirdDart':(context)=>RegisterThirdPage(),
   '/appBarDemo':(context)=>AppBarDemoPage(),
   '/tabBarControllerpage':(context)=>TabBarControllerpage(),
-  '/user':(context)=>UserPage()
+  '/user':(context)=>UserPage(),
+  '/buttonDemo':(context)=>ButtonDemoPage()
 
 
 };

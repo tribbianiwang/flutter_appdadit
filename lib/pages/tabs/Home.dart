@@ -57,6 +57,17 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
         ),
+
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text("点击跳转到Button演示界面"),
+          onPressed: (){
+            //路由跳转
+            Navigator.pushNamed(context, '/buttonDemo');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
       ],
 
     );

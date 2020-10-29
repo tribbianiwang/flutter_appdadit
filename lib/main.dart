@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       // home:Tabs(),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',//初始化时加载的路由
+      initialRoute: '/buttonDemo',//初始化时加载的路由
       onGenerateRoute:onGenerateRoute
 
     );
