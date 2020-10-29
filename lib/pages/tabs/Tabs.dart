@@ -77,6 +77,9 @@ class _TabsState extends State<Tabs> {
                 child: Icon(Icons.home),
               ),
               title: Text('我的空间'),
+              onTap: (){
+                Navigator.pushNamed(context, '/user');
+              },
             ),
             Divider(),
             ListTile(

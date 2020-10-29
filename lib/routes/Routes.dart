@@ -1,3 +1,5 @@
+import 'package:flutter_appdadit/User.dart';
+
 import '../pages/tabs/Form.dart';
 import '../pages/tabs/Setting.dart';
 import '../pages/tabs/Search.dart';
@@ -26,6 +28,7 @@ final routes={
   '/registerThirdDart':(context)=>RegisterThirdPage(),
   '/appBarDemo':(context)=>AppBarDemoPage(),
   '/tabBarControllerpage':(context)=>TabBarControllerpage(),
+  '/user':(context)=>UserPage()
 
 
 };
