@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
 import 'Category.dart';
 import 'Home.dart';
 import 'Setting.dart';
@@ -77,9 +78,7 @@ class _TabsState extends State<Tabs> {
                 child: Icon(Icons.home),
               ),
               title: Text('我的空间'),
-              onTap: (){
-                Navigator.pushNamed(context, '/user');
-              },
+
             ),
             Divider(),
             ListTile(
@@ -87,6 +86,10 @@ class _TabsState extends State<Tabs> {
                 child: Icon(Icons.person),
               ),
               title: Text('用户'),
+              onTap: (){
+                Navigator.of(context).pop();//隐藏侧边栏
+                Navigator.pushNamed(context, '/user');
+              },
             ),
             Divider(),
             ListTile(
