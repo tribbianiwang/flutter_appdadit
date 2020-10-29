@@ -5,59 +5,92 @@ import 'Setting.dart';
 
 class Tabs extends StatefulWidget {
   final index;
-  Tabs({Key key,this.index=0}):super(key:key);
+
+  Tabs({Key key, this.index = 0}) : super(key: key);
+
   @override
   _TabsState createState() => _TabsState(index);
 }
 
 class _TabsState extends State<Tabs> {
-  int _currentIndex=0;
-  _TabsState(index){
+  int _currentIndex = 0;
+
+  _TabsState(index) {
     this._currentIndex = index;
   }
-  List _pageList=[
-    HomePage(),
-    CategoryPage(),
-    SettingPage()
-  ];
+
+  List _pageList = [HomePage(), CategoryPage(), SettingPage()];
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      // appBar: AppBar(
-      //   title: Text("flutter demo"),
-      // ),
-      body:this._pageList[this._currentIndex],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("flutter demo"),
+      ),
+      body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
         iconSize: 40,
         fixedColor: Colors.red,
         type: BottomNavigationBarType.fixed,
-        onTap:(int index){
+        onTap: (int index) {
           setState(() {
-            this._currentIndex=index;
+            this._currentIndex = index;
           });
-
-
         },
         items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title:Text("首页")
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category),
-              title:Text("分类")
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title:Text("设置")
-          )
-
-
+              icon: Icon(Icons.category), title: Text("分类")),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
         ],
       ),
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            Row(children: <Widget>[
+              Expanded(
+                child: DrawerHeader(
+                  child: Text('你好Flutter'),
+                  decoration: BoxDecoration(
+                    // color: Colors.yellow,
+                    image:DecorationImage(
+                      image:NetworkImage("https://www.itying.com/images/flutter/2.png"),fit: BoxFit.cover
+                    ),
 
+
+                  ),
+                ),
+              )
+            ],),
+
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.home),
+              ),
+              title: Text('我的空间'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.person),
+              ),
+              title: Text('用户'),
+            ),
+            Divider(),
+            ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.settings),
+              ),
+              title: Text('设置'),
+            ),
+            Divider(),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: Text('右侧侧边栏'),
+      ),
     );
   }
 }
