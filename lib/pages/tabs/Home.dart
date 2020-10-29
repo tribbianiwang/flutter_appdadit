@@ -46,6 +46,17 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
         ),
+
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text("跳转到tabbarController"),
+          onPressed: (){
+            //路由跳转
+            Navigator.pushNamed(context, '/tabBarControllerpage');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
       ],
 
     );
