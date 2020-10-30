@@ -28,6 +28,29 @@ class _TabsState extends State<Tabs> {
       appBar: AppBar(
         title: Text("flutter demo"),
       ),
+      floatingActionButton:Container(
+        height: 80,
+        width: 80,
+        margin: EdgeInsets.only(top:20),
+        padding: EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+              color: Colors.white
+        ),
+        child:  FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: (){
+            print("floating_action_button_adds");
+            setState(() {
+              this._currentIndex = 1;
+            });
+          },
+          backgroundColor: this._currentIndex==1?Colors.yellow:Colors.red,
+        ),
+
+      )
+     ,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
@@ -44,6 +67,7 @@ class _TabsState extends State<Tabs> {
           BottomNavigationBarItem(
               icon: Icon(Icons.category), title: Text("分类")),
           BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
+
         ],
       ),
       drawer: Drawer(
