@@ -6,6 +6,7 @@ class CheckBoxDemo extends StatefulWidget {
 
 class _CheckBoxDemoState extends State<CheckBoxDemo> {
   var flag = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,8 +47,10 @@ class _CheckBoxDemoState extends State<CheckBoxDemo> {
             title: Text("标题"),
             subtitle: Text("这是一个二级标题"),
             secondary: Icon(Icons.radio),
+            selected: this.flag,
 
-          )
+          ),
+
 
         ],
       ),

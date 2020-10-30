@@ -17,6 +17,7 @@ import '../ButtonDemo.dart';
 import '../RadioDemo.dart';
 import '../CheckBoxDemo.dart';
 import '../FieldDemo.dart';
+import '../FormDemo.dart';
 
 //配置路由
 
@@ -36,7 +37,8 @@ final routes={
   '/buttonDemo':(context)=>ButtonDemoPage(),
   '/fieldDemo':(context)=>FieldDemo(),
   '/checkboxDemo':(context)=>CheckBoxDemo(),
-  '/radioDemo':(context)=>RadioDemo()
+  '/radioDemo':(context)=>RadioDemo(),
+  '/FormDemoPage':(context)=>FormDemoPage()
 
 
 
