@@ -14,6 +14,9 @@ import '../user/RegisterThirdDart.dart';
 import '../AppBarDemo.dart';
 import '../TabBarController.dart';
 import '../ButtonDemo.dart';
+import '../RadioDemo.dart';
+import '../CheckBoxDemo.dart';
+import '../FieldDemo.dart';
 
 //配置路由
 
@@ -30,7 +33,11 @@ final routes={
   '/appBarDemo':(context)=>AppBarDemoPage(),
   '/tabBarControllerpage':(context)=>TabBarControllerpage(),
   '/user':(context)=>UserPage(),
-  '/buttonDemo':(context)=>ButtonDemoPage()
+  '/buttonDemo':(context)=>ButtonDemoPage(),
+  '/fieldDemo':(context)=>FieldDemo(),
+  '/checkboxDemo':(context)=>CheckBoxDemo(),
+  '/radioDemo':(context)=>RadioDemo()
+
 
 
 };

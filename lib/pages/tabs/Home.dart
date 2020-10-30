@@ -68,6 +68,37 @@ class _HomePageState extends State<HomePage> {
           color:Theme.of(context).accentColor,
           textTheme: ButtonTextTheme.primary,
         ),
+
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text("表单演示界面"),
+          onPressed: (){
+            //路由跳转
+            Navigator.pushNamed(context, '/fieldDemo');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text("checkbox界面"),
+          onPressed: (){
+            //路由跳转
+            Navigator.pushNamed(context, '/checkboxDemo');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
+        SizedBox(height: 20,),
+        RaisedButton(
+          child: Text("Radio演示界面"),
+          onPressed: (){
+            //路由跳转
+            Navigator.pushNamed(context, '/radioDemo');
+          },
+          color:Theme.of(context).accentColor,
+          textTheme: ButtonTextTheme.primary,
+        ),
       ],
 
     );
